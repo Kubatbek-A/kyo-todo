@@ -1,3 +1,5 @@
+# Kyo Todo
+
 ## Appendix
 
 Frontend Stack: React, NextJS, TypeScript, React Query, Styled Components, AntD, EditorJS
@@ -13,8 +15,6 @@ Backend Stack: NodeJS, NestJS, PostgreSQL, TypeScript, TypeORM
 - Filter, sort, search, pagination
 - Google SignIn
 - Refactor and fix
-
-# Kyo Todo
 
 ## Features
 
@@ -99,4 +99,4 @@ The task is not at all difficult, but it is voluminous. We had to leave such det
 - Friday - 2h
 - Saturday - 5h
 - Monday - 5h
-  In general - 14 hours
+- In general - 14 hours
