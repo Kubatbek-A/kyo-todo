@@ -1,4 +1,14 @@
 # Kyo Todo
+## How it looks
+
+https://github.com/Kubatbek-A/kyo-todo/assets/57436000/453b91a6-e896-4283-820d-ed44c82ae95a
+
+
+
+https://github.com/Kubatbek-A/kyo-todo/assets/57436000/321a13b2-f73e-4de1-b1a9-25f4b1da0cd4
+
+
+
 
 ## Appendix
 
