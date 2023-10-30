@@ -20,7 +20,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 export default function Login() {
   return (
     <Layout>
-      <Header />;
+      <Header />
     </Layout>
   );
 }

@@ -14,6 +14,7 @@ import UserProvider from "@/contexts/UserProvider";
 import { useState } from "react";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import dynamic from "next/dynamic";
+import HydrationRenderChecker from "@/hooks/useIsHydrationRender/HydrationRenderChecker";
 
 const CustomThemeProvider = dynamic(
   () => import("@/UI/Provider/themeProvider"),
@@ -76,22 +77,23 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <AntDesignConfigProvider theme={antdThemeLight}>
-        <CustomThemeProvider>
-          <GlobalStyles />
-          <QueryClientProvider client={queryClient}>
-            <Hydrate state={pageProps.dehydratedState}>
+      <HydrationRenderChecker></HydrationRenderChecker>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <AntDesignConfigProvider theme={antdThemeLight}>
+            <CustomThemeProvider>
+              <GlobalStyles />
               <AuthIdentifiersProvider>
                 <UserProvider>
                   <Component {...pageProps} />
                 </UserProvider>
               </AuthIdentifiersProvider>
-            </Hydrate>
 
-            <ReactQueryDevtools initialIsOpen={false} />
-          </QueryClientProvider>
-        </CustomThemeProvider>
-      </AntDesignConfigProvider>
+              <ReactQueryDevtools initialIsOpen={false} />
+            </CustomThemeProvider>
+          </AntDesignConfigProvider>
+        </Hydrate>
+      </QueryClientProvider>
     </>
   );
 }
