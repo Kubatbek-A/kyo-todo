@@ -8,5 +8,20 @@
   "jsxSingleQuote": false,
   "bracketSameLine": false,
   "printWidth": 80,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "importOrderSeparation": true,
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "interface",
+    "(?=content|api)",
+    "context/",
+    "mock/",
+    "config",
+    "utils/",
+    "hooks/",
+    "(components/|./index)",
+    ".svg",
+    "^../(.*)$",
+    "(?=./styles.module.scss)"
+  ]
 }
